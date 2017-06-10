@@ -77,7 +77,7 @@ function getSlackUserName(parsedBody, success)
 
 function getSlackText(parsedBody)
 {
-    var hostName = parsedBody.hostName
+    var hostName = parsedBody.hostName.replace('.scm','')
     var id = parsedBody.id
     return (
         'Initiated by: ' +
